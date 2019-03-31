@@ -29,43 +29,37 @@
         
      
         //Creat Loop and append Randmon Number to Variable
-        $(document).ready(function () {
-            var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_"];
-            var wins = document.getElementById("losses");
-            var losses = document.getElementById("wins");
-            // var guessesLeft = document.getElementById("guesses-left");
-            // var yourGuesses = document.getElementById("your-guesses")
-        // console.log("pressed a button");
-            //Declare Variables
-            var userGuess = [];
-            $(document).keypress(function (event) {
-                var userKey = event.key;
-                userGuess.push(userKey)
-                // userGuess.attr("value");
-                console.log(userKey);
-                console.log(userGuess)
-                
-
-            
-            });
-
-                // userGuess.push(value)
-                
-                // userGuess.push(value)
-              
-              
-            
+        // $(document).ready(function () {
         
-            
+                
+            //declare variables
+            var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_"];
+            var wins = "";
+            var losses = "";
+            var guessesLeft = "";
+            var yourGuesses = userGuess;
+           
+           //wire up event to caputre key pressed
+            document.onkeyup = function(event) {
+                var userGuess = event.key;
+                console.log(userGuess)
+
+            }
+            //What happens why I enter a letter
+                //If the number of letters is less than 10, append another number
+                //else if the number of letter is 10 or greater clear the letters and set losses to 1
+                
+
+          
             var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
        
 
             console.log("Computer guess: " + computerGuess);
 
 
-            
-            
-        });
+          
+             
+        // });
            
         
         
