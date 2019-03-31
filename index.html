@@ -6,9 +6,58 @@
     <title>Psychic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assests/css/style.css">
-    <script src="assests/javascript/game.js"></script>
+    <!-- <script src="assests/javascript/game.js"></script> -->
 </head>
 <body>
+    
+
+
+
+    <script type="text/javascript">
+     var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_"];
+     var wins = "";
+     var losses = "";
+     var guessesLeft = 9;
+        //Creat Loop and append Randmon Number to Variable
+    document.onkeyup = function() {
+    // console.log("pressed a button");
+        //Declare Variables
+        var userGuess = event.key;
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        console.log("User guess: " + userGuess);
+
+        console.log("Computer guess: " + computerGuess);
+    };
+           
+        
+        
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
     
 
     
