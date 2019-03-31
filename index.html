@@ -14,10 +14,10 @@
     <div class="container">
         <h1>The Psychic Game</h1>
         <p>Guess What letter I'm thinking of?</p>
-        <div class = "wins">Wins: </div>
-        <div class = "losses">Losses: </div>
-        <div class = "guesses-left">Guesses Left: </div>
-        <div class = "your-guesses">Your Gueses: <span></span></div>
+        <div id = "wins">Wins: </div>
+        <div id = "losses">Losses: </div>
+        <div id = "guesses-left">Guesses Left: </div>
+        <div id = "your-guesses">Your Gueses: <span></span></div>
         <div id="buttons"></div>
     
 
@@ -33,32 +33,38 @@
         
                 
             //declare variables
-            var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_"];
-            var wins = "";
-            var losses = "";
-            var guessesLeft = "";
-            var yourGuesses = userGuess;
+            var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+            var wins = document.getElementById("wins");
+            var losses = document.getElementById("losses");
+            var guessesLeft = document.getElementById("gueses-left");
+            var yourGuesses = document.getElementById("your-guesses");
            
            //wire up event to caputre key pressed
             document.onkeyup = function(event) {
-                var userGuess = event.key;
+                var userGuess = [];
+                event.key = userGuess;
+                userGuess.push(event.key)
+                console.log(event.key)
                 console.log(userGuess)
+                console.log(userGuess.length)
+                
+                
 
-            }
-            //What happens why I enter a letter
+           
+                //What happens why I enter a letter
                 //If the number of letters is less than 10, append another number
                 //else if the number of letter is 10 or greater clear the letters and set losses to 1
                 
 
-          
-            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                //create variable to coose random number from array
+                var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
        
 
-            console.log("Computer guess: " + computerGuess);
+                console.log("Computer guess: " + computerGuess);
 
 
           
-             
+        }   
         // });
            
         
