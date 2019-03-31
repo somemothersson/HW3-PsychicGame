@@ -17,7 +17,8 @@
         <div class = "wins">Wins: </div>
         <div class = "losses">Losses: </div>
         <div class = "guesses-left">Guesses Left: </div>
-        <div class = "your-guesses">Your Gueses: </div>
+        <div class = "your-guesses">Your Gueses: <span></span></div>
+        <div id="buttons"></div>
     
 
 
@@ -25,30 +26,39 @@
 
 
     <script type="text/javascript">
+        
      
         //Creat Loop and append Randmon Number to Variable
         $(document).ready(function () {
             var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_"];
             var wins = document.getElementById("losses");
             var losses = document.getElementById("wins");
-            var guessesLeft = document.getElementById("guesses-left");
+            // var guessesLeft = document.getElementById("guesses-left");
             // var yourGuesses = document.getElementById("your-guesses")
         // console.log("pressed a button");
             //Declare Variables
-            
-            $(document).on("keyup", function () {
-                var userGuess = [];
+            var userGuess = [];
+            $(document).keypress(function (event) {
+                var userKey = event.key;
+                userGuess.push(userKey)
+                // userGuess.attr("value");
+                console.log(userKey);
+                console.log(userGuess)
                 
+
+            
+            });
 
                 // userGuess.push(value)
                 
                 // userGuess.push(value)
-                console.log(userGuess)
-                $("#your-guesses").text(userGuess);
-            });
+              
+              
+            
+        
             
             var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-            console.log("User guess: " + userGuess);
+       
 
             console.log("Computer guess: " + computerGuess);
 
