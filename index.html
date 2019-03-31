@@ -6,28 +6,56 @@
     <title>Psychic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assests/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="assests/javascript/game.js"></script> -->
 </head>
 <body>
     
+    <div class="container">
+        <h1>The Psychic Game</h1>
+        <p>Guess What letter I'm thinking of?</p>
+        <div class = "wins">Wins: </div>
+        <div class = "losses">Losses: </div>
+        <div class = "guesses-left">Guesses Left: </div>
+        <div class = "your-guesses">Your Gueses: </div>
+    
 
+
+    </div>
 
 
     <script type="text/javascript">
-     var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_"];
-     var wins = "";
-     var losses = "";
-     var guessesLeft = 9;
+     
         //Creat Loop and append Randmon Number to Variable
-    document.onkeyup = function() {
-    // console.log("pressed a button");
-        //Declare Variables
-        var userGuess = event.key;
-        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        console.log("User guess: " + userGuess);
+        $(document).ready(function () {
+            var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_"];
+            var wins = document.getElementById("losses");
+            var losses = document.getElementById("wins");
+            var guessesLeft = document.getElementById("guesses-left");
+            // var yourGuesses = document.getElementById("your-guesses")
+        // console.log("pressed a button");
+            //Declare Variables
+            
+            $(document).on("keyup", function () {
+                var userGuess = [];
+                
 
-        console.log("Computer guess: " + computerGuess);
-    };
+                // userGuess.push(value)
+                
+                // userGuess.push(value)
+                console.log(userGuess)
+                $("#your-guesses").text(userGuess);
+            });
+            
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+            console.log("User guess: " + userGuess);
+
+            console.log("Computer guess: " + computerGuess);
+
+
+            
+            
+        });
            
         
         
