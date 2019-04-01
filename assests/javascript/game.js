@@ -19,6 +19,7 @@ var yourGuessesText = document.getElementById("your-guesses");
 //wire up event to caputre key pressed
 document.onkeyup = function(event) {
     var userGuess = event.key
+    var storedGuess = [];
     // event.key = userGuess.push(event.key);
     // userGuess.push(event.key)
     // console.log(event.key)
@@ -27,7 +28,10 @@ document.onkeyup = function(event) {
     //     userGuess.push(i)
     // }
     if (userGuess == "j") {
-        
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+
+        console.log("Computer guess: " + computerGuess);
         console.log("if");
         yourGuessesText.textContent = userGuess;
     }
@@ -45,10 +49,7 @@ document.onkeyup = function(event) {
     
 
     //create variable to coose random number from array
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
-
-    console.log("Computer guess: " + computerGuess);
+ 
 
     // if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
 
