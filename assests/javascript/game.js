@@ -34,7 +34,7 @@ document.onkeyup = function(event) {
 
         console.log("Computer guess: " + computerGuess);
         console.log("if");
-        yourGuessesText.textContent = yourGuesses[i];
+        // yourGuessesText.textContent = yourGuesses[0];
     }
     // } else {
    
@@ -50,19 +50,6 @@ document.onkeyup = function(event) {
     
 
     //create variable to coose random number from array
- 
-
-    // if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
-
-    //     if ((userGuess === "r" && computerGuess === "s") ||
-    //       (userGuess === "s" && computerGuess === "p") || 
-    //       (userGuess === "p" && computerGuess === "r")) {
-    //       wins++;
-    //     } else if (userGuess === computerGuess) {
-    //       ties++;
-    //     } else {
-    //       losses++;
-    //     }
 
         
         // Display the user guess guesses left, and wins/losses.
