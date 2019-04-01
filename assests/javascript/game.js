@@ -6,7 +6,7 @@
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
-var yourGuesses = "";
+var yourGuesses = [];
 
     
 //declare variables to hold reference points
@@ -19,7 +19,8 @@ var yourGuessesText = document.getElementById("your-guesses");
 //wire up event to caputre key pressed
 document.onkeyup = function(event) {
     var userGuess = event.key
-    var storedGuess = [];
+    yourGuesses.push(userGuess)
+    console.log("yourguess", yourGuesses)
     // event.key = userGuess.push(event.key);
     // userGuess.push(event.key)
     // console.log(event.key)
@@ -33,7 +34,7 @@ document.onkeyup = function(event) {
 
         console.log("Computer guess: " + computerGuess);
         console.log("if");
-        yourGuessesText.textContent = userGuess;
+        yourGuessesText.textContent = yourGuesses[i];
     }
     // } else {
    
