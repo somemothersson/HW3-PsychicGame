@@ -18,17 +18,19 @@ var yourGuessesText = document.getElementById("your-guesses");
 
 //wire up event to caputre key pressed
 document.onkeyup = function(event) {
-    var userGuess = [];
+    var userGuess = event.key
     // event.key = userGuess.push(event.key);
-    userGuess.push(event.key)
+    // userGuess.push(event.key)
     // console.log(event.key)
     console.log("user guess ", userGuess, "I cant figure out how to store the choices")
     // for (var i = 0; i <10; i++){
     //     userGuess.push(i)
     // }
-    // if ((userGuess == computerChoices[i])) {
-    //     wins++
-    //     console.log("win")
+    if (userGuess == "j") {
+        
+        console.log("if");
+        yourGuessesText.textContent = userGuess;
+    }
     // } else {
    
 
@@ -47,4 +49,25 @@ document.onkeyup = function(event) {
 
 
     console.log("Computer guess: " + computerGuess);
+
+    // if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+
+    //     if ((userGuess === "r" && computerGuess === "s") ||
+    //       (userGuess === "s" && computerGuess === "p") || 
+    //       (userGuess === "p" && computerGuess === "r")) {
+    //       wins++;
+    //     } else if (userGuess === computerGuess) {
+    //       ties++;
+    //     } else {
+    //       losses++;
+    //     }
+
+        
+        // Display the user guess guesses left, and wins/losses.
+    //     yourGuessesText.textContent = userGuess;
+    //     guessesLeftText.textContent = guessesLeft
+    //     winsText.textContent =  wins;
+    //     lossesText.textContent = losses;
+      
+    //   }
 }
